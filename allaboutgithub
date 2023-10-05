@@ -1,0 +1,184 @@
+<html>
+<head>
+        <title>HTML All About Github</title>
+    <style>
+        body{background-image: url(darkpattern.jfif);}
+        h1{color: aliceblue;font-style: italic;}
+        h2{color: aliceblue;font-style: italic;}
+        h3{}
+        table{background-color: #a6a6a6;width: 900px;border:10px solid #00105f;margin:auto;> }
+        tr{}
+        td{color: #2c2c2c;font-size: medium;font-family: 'Times New Roman', Times, serif;}
+        th{color:#323232; font-size: large; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+        ul{color: #600000; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+        ol{color: #750000; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+        li{color: #ffffff;font-family: 'Times New Roman', Times, serif ;}
+
+        a{text-decoration: none; font-weight: bold; font-size: 1.2em;}
+        a:link {color: #5227c0}
+        a:visited {color:#323232}
+        a:hover {color: #600000}
+        a:active {color: #0066f2}
+    </style>
+</head>
+<body class="center">
+<center>
+
+    <h1>All About GitHub</h1>
+    <img src="octocat.jpg" width="400px" alt="Octocat image by Cameron McEfee, The Octocat-a nerdy household name">
+    <table>
+        <tr>
+            <th>Q. What is a Version Control System?</th>
+        </tr>
+        <tr>
+            <td>Tracks changes to files over time</td>
+        </tr>
+    </table>
+    <table>   
+        <tr>
+            <th>Q. What is Git?</th>
+        </tr>
+        <tr>
+            <td>Git is a Version Control System that allows you to record, 
+                save, and update a codebases from a remote codebase providing a
+                 space for collaborators in program development.</td>
+        </tr>
+    </table>
+    <table> 
+        <tr>
+            <th>Q. What is GitHub?</th>
+        </tr>
+        <tr>
+            <td>GitHub, Inc. is a platform and cloud-based service for
+                 software development and version control using Git</td>
+        </tr>
+    </table>
+    <table>  
+        <tr>
+            <th>Q. What is the difference between git and GitHub?</th>
+        </tr>
+        <tr>
+            <td>GitHub is a hosting platform for git repositories while Git
+                 is simply said repository.</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Q. Who started GitHub and how was it started?</th>
+        </tr>
+        <tr>
+            <td>Tom Preston-Werner and Chris Wanstrath created GitHub and it was 
+                started as a beta a few months before its official release in April 2008.
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Q. What company owns it now?</th>
+        </tr>
+        <tr>
+            <td>Microsoft</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Q. How much does a GitHub account cost?</th>
+        </tr>
+        <tr>
+            <td>It is absolutely free!!!!!!!!!</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Q. What is the octocat?</th>
+        </tr>
+        <tr>
+            <td>The octocate is the mascot of GitHub.</td>
+        </tr>
+    </table>
+    <h2>Git/GitHub Terms:</h2>
+    <table>
+        <tr>
+            <th>Repository</th>
+        </tr>
+        <tr>
+            <td>A repository is a central storage location where version-controlled 
+                files and the entire history of a project are stored.</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Commit</th>
+        </tr>
+        <tr>
+            <td>Commit means saving changes to a file or repository</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Fork</th>
+        </tr>
+        <tr>
+            <td>Forking means to create a personal digital copy of
+                 someone elses work to use as a resource for future programs</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Push</th>
+        </tr>
+        <tr>
+            <td>Push refers to the action of uploading or sending local changes/commits
+                 from your local repository to a remote repository</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Pull Request</th>
+        </tr>
+        <tr>
+            <td>A pull request means to make a reccommendation in 
+                updating a code in a codebase that can be accepted and merged into a codebase</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Workflows</th>
+        </tr>
+        <tr>
+            <td>A workflow is a series of automated steps coded into a program</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Issues</th>
+        </tr>
+        <tr>
+            <td>Issues refers to bugs disabling a languages ability 
+                to interpret code, needs to be addressed and reworked</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Raw Button</th>
+        </tr>
+        <tr>
+            <td>Clicking the raw button in GitHub allows you to see the
+                 raw data in a program in text form</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Blame Button</th>
+        </tr>
+        <tr>
+            <td>The blame button in GitHub allows you to see the commit history of a program</td>
+        </tr>
+    </table>
+    
+        
+        
+</center>
+</body>
+</html>
