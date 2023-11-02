@@ -1,1 +1,196 @@
-Reporting and analytics enable team members to share status, goals and test results. Advanced tools integrate project metrics and present results in a dashboard. Teams quickly see the overall health of a project and can monitor relationships between test, development and other project elements.
+<html>
+<head>
+        <title>HTML: Chapter 5 Programming Algorithms & Software Testing</title>
+    <style>
+        body{background-image: url(squidbackground.png);}
+        h1{color: aliceblue;font-style: italic; background-color: #2c2c2c; width: 900px;}
+        h2{color: aliceblue;font-style: italic;}
+        h3{}
+        table {border-collapse:separate; width: 900px; margin: auto; background-color: #727272;}
+        tr{}
+        td{font-weight: bold;color: #2c2c2c;font-size: medium;font-family: 'Times New Roman', Times, serif;text-align: center; border: 1px solid #000000}
+        th{ ;border: #252525="width: 150px; "color:#323232; font-size: large; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+        ul{color: #600000; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;background-color: #727272; width: 860px; list-style: none;border: #000000; border-style: dashed; padding: 3px;}
+        ol{color: #750000; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+        li{color: #171717;font-family: 'Times New Roman', Times, serif ; text-align: left;font-weight: bolder;font-size: large;}
+
+        a{text-decoration: none; font-weight: bold; font-size: 1.2em;}
+        a:link {color: #5227c0}
+        a:visited {color:#030098}
+        a:hover {color: #000000}
+        a:active {color: #0066f2}
+    </style>
+</head>
+<body class="center">
+<center>
+
+    <h1 style="background-color: rgb(171, 171, 171); color: #2c2c2c;border: #000000; border-style: dashed; padding: 5px;">Chapter 5 Programming Algorithms & Software Testing</h1>
+
+    <h1 style="background-color: #2c2c2c; width: 900px;">Phases of computer program development</h1>
+    <ul>
+        <li>- Phase 1: Understand the problem.</li>
+        <li>- Phase 2: Design an algorithm to solve the problem.</li>
+        <li>- Phase 3: Write the program code in appropiate language based on the algorithm.</li>
+        <li>- Phase 4: Enter the program and save.</li>
+        <li>- Phase 5: Execute the program.</li>
+        <li>- Phase 6: Test the program, find errors and debug, then retest.</li>
+        <li>- Phase 7: Document and evaluate the program. </li>
+    
+    </ul>
+    <table style="border: #2c2c2c; border-style: dashed;">
+        <h1 style="background-color: #2c2c2c; width: 900px;">Programming structures</h1>
+        <tr>
+            <th style="width: 300px;">Sequencial Structure:</th>
+            <td style="text-align: left;">Top Down Execution</td>
+        </tr>
+        <tr>
+            <th style="width: 300px;">Decision Structures:</th>
+            <td style="text-align: left;">if/then/else</td>
+        </tr>
+    </table>
+    <ul>
+        <li style="text-align: center; font-size: larger;">Iterative (Looping)</li>
+        <li>- While loop: continue looping as long as something is true</li>
+        <li>- Repeat/Until loop: continue looping untile something is true</li>
+        <li>- For loop: loop a given number of times</li>
+    </ul>
+    <ul>
+        <li style="text-align: center; font-size: larger;">Recursive Structures</li>
+        <li>- Repeat a set of instructions as a subtask of itself</li>
+        <li>- Repetition continues until: Degenerative case, which is also a termination condition.</li>
+        
+    </ul>
+    <table style="border: #2c2c2c; border-style: dashed;">
+        <h1 style="background-color: #2c2c2c; width: 900px;">Two Classic Programming/Database Problems</h1>
+        <tr>
+            <th style="width: 300px;">Sorting: Descending order/Acending order</th>
+            <td style="text-align: left;">Sorting numbers and Sorting strings (in accordance with ASCII values)</td>
+        </tr>  
+    </table>
+    <ul>
+        <li style="text-align: center; font-size: larger;">Searching: find specific data that meet a certain criteria</li>
+        <li style="font-size: larger; font-weight: bold;">In Database...</li>
+            
+                <li>- Filters: Temporary search</li>
+                <li>- Queries: Search criteria  are saved so they don't have to be recreated</li>
+            
+    </ul>
+    <ul>
+        <li style="text-align: center; font-size: larger;">Two popular search techniques</li>
+        <li>- Sequential Search: seach from top to bottom or bottom to top, one item at a time</li>
+            
+        <li>- Binary Search: only works if data is SORTED first. start in the middle, then go to half of that, etc.</li>
+        
+    </ul>
+    <table style="border: #2c2c2c; border-style: dashed;">
+        <h1 style="background-color: #2c2c2c; width: 900px;">Two classic program goals</h1>
+        <tr>
+            <th style="width: 300px;">Efficiency:</th>
+            <td style="text-align: left;">Program takes minimal time and/or resources.</td>
+        </tr>
+        <tr>
+            <th style="width: 300px;">Correctness:</th>
+            <td style="text-align: left;">Program runs in expected ways and works for all expected conditions.</td>
+        </tr>
+    </table>
+
+    <h1 style="background-color: #2c2c2c; width: 900px;">Software testing and verification definitions</h1>
+    <table style="border-collapse: collapse;">
+        <td style="color: #191919;font-size: larger;">Kinds of tests:</td>
+    </table>
+    <table style="border-collapse:separate; width: 900px; margin: auto">
+    <tr>
+        <td style="width: 150px; ">Acceptance testing</td>
+        <td>Verifying whether the whole system works as intended</td>
+    </tr>
+    <tr>
+        <td >Integration testing</td>
+        <td>ensuring that software components or functions operate together.</td>
+    </tr>
+    <tr>
+        <td >Unit testing</td>
+        <td>Validating that each software unit performs as expected. A unit is the smallest testable component of an application.</td>
+    </tr>
+    <tr>
+        <td >Funtional testing</td>
+        <td>Checking functions by emulating business scenarios, based on functional requirements. Black-box testing is a common way to verify functions</td>
+    </tr>
+    <tr>
+        <td >Performance testing</td>
+        <td>Testing how the software performs under different workloads. Load testing, for example, is used to evaluate performance under real-life load conditions.</td>
+    </tr>
+    <tr>
+        <td >Regression testing</td>
+        <td>Checking whether new feature break or degrade functionality. Sanity testing can be used to verify menus, functions and commands at the surface level, when there is no time for a full regression test.</td>
+    </tr>
+    <tr>
+        <td >Stress testing</td>
+        <td>Testing how much strain the system can take before it fails. Considered to be a type of non-functional testing.</td>
+    </tr>
+    <tr>
+        <td >Usability testing</td>
+        <td>Validating how well a customer can use a system or a web application to complete a task.</td>
+    </tr>
+    </table>
+    
+    
+    <ul>
+        <li style="text-align: center; font-size: larger;">Software testing is done to detect:</li>
+        <li style="text-align: center;">- Architectural flaws</li>
+        <li style="text-align: center;">- Poor design decisions</li>
+        <li style="text-align: center;">- Invalid or incorrect funtionality</li>
+        <li style="text-align: center;">- Security vulnerablities</li>
+        <li style="text-align: center;">- Scalability issues</li>
+        
+    </ul>
+    <table style="border-collapse: collapse;">
+        <td style="color: #191919;font-size: larger;">Testing best practices:</td>
+    </table>
+    <table style="border-collapse:separate; width: 900px; margin: auto">
+    
+
+    <tr>
+        <td style="width: 150px; " >Continuous testing</td>
+        <td>Project teams test each build as it becomes available. This type of software 
+            testing relies on test automation that is integrated with the deployment 
+            process. It enables software to be validated in realistic test environments
+             earlier in the process – improving design and reducing risks.</td>
+    </tr>
+    <tr>
+        <td >Configuration managment</td>
+        <td>Organizations centrally maintain
+             test assets and track what software builds to test. Teams gain access to
+              assets such as code, requirements, design documents, models, test scripts 
+              and test results. Good systems include user authentication and audit trails
+               to help teams meet compliance requirements with minimal administrative
+                effort.</td>
+    </tr>
+    <tr>
+        <td >Service virtualization</td>
+        <td>Testing environments may not be available, especially early in code 
+            development. Service virtualization simulates the services and systems 
+            that are missing or not yet completed, enabling teams to reduce dependencies 
+            and test sooner. They can reuse, deploy and change a configuration to test
+             different scenarios without having to modify the original environment.</td>
+    </tr>
+    <tr>
+        <td >Defect or "bug tracking"</td>
+        <td>Monitoring defects is important to both testing and development teams for measuring and
+             improving quality. Automated tools allow teams to track defects, measure their scope and impact,
+            and uncover related issues.</td>
+    </tr>
+    <tr>
+        <td >Metrics and reporting</td>
+        <td>Reporting and analytics enable team members to share status, goals and test 
+            results. Advanced tools integrate project metrics and present results in a
+             dashboard. Teams quickly see the overall health of a project and can monitor
+              relationships between test, development and other project elements.</td>
+    </tr>
+    </table>
+    <h2 style="font-size:larger;margin: 60px;background-color: #dcdcdc;border: #000000;border-style: dashed;"><a href="https://www.ibm.com/topics/software-testing">From: IBM What is software testing?</a></h2>
+
+
+</center>
+</body>
+</html>
