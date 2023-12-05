@@ -3,38 +3,38 @@
 
 import datetime
 
-############## Lists of data ###########
+############## LISTS of data ############
 emp = [
-    "Smith, James      ",
-    "Johnson, Patricia ",
-    "Williams, John    ",
-    "Brown, Micheal    ",
-    "Jones, Elizabeth  ",
-    "Garcia, Brian     ",
-    "Miller, Deborah   ",
-    "Davis, Timothy    ",
-    "Rodriguez, Ronald ",
-    "Martinez, Karen   ",
-    "Hernandex, Lisa   ",
-    "Lopez, Nancy      ",
-    "Gonzales, Betty   ",
-    "Wilson, Sandra    ",
-    "Anderson, Margie  ",
-    "Thomas, Daniel    ",
-    "Taylor, Steven    ",
-    "Moore, Andrew     ",
-    "Jackson, Donna    ",
-    "Martin, Yolanda   ",
-    "Lee, Carolina     ",
-    "Perez, Kevin      ",
-    "Thomson, Brian    ",
-    "White, Deborah    ",]
+    "Smith, James     ",
+    "Johnson, Patricia",
+    "Williams, John   ",
+    "Brown, Michael   ",
+    "Jones, Elizabeth ",
+    "Garcia, Brian    ",
+    "Miller, Deborah  ",
+    "Davis, Timothy   ",
+    "Rodriguez, Ronald",
+    "Martinez, Karen  ",
+    "Hernandez, Lisa  ",
+    "Lopez, Nancy     ",
+    "Gonzales, Betty  ",
+    "Wilson, Sandra   ",
+    "Anderson, Margie ",
+    "Thomas, Daniel   ",
+    "Taylor, Steven   ",
+    "Moore, Andrew    ",
+    "Jackson, Donna   ",
+    "Martin, Yolanda  ",
+    "Lee, Carolina    ",
+    "Perez, Kevin     ",
+    "Thompson, Brian  ",
+    "White, Deborah   ",]
 
-job = ["C", "S", "J", "C", "C", "C", "C", "S", "M", "C", "S",
+job = ["C", "S", "J", "M", "C", "C", "C", "C", "S", "M", "C", "S",
      "C", "C", "S", "C", "C", "M", "J", "S", "S", "C", "S", "M",]
 
 hours = [37, 29, 32, 20, 24, 34, 28, 23, 35, 39, 36, 29, 26, 38,
-         28, 31, 37, 32, 36, 22, 29, 21, 31]
+         28, 31, 37, 32, 36, 22, 28, 29, 21, 31]
 
 num_emps = len(emp)
 
@@ -62,15 +62,9 @@ DED_RATE = (.12, .03, .062, .0145, .04 )
 
 ############## define program functions ###############
 def main():
-    get_user_data()
     perform_calculations()
     display_results()
-def get_user_data():
-    global job, hours
 
-    for i in range(num_emps):
-        hours.append(int(input(f"How many hours did {emp[i]} work? : ")))
-        job.append(input(f"What is {emp[i]}'s assigned job? Cashier (C), Stocker (S), Janitorial (J), or Maintenance (M)? : "))
 
 def perform_calculations():
     global total_gross, total_net
@@ -93,9 +87,10 @@ def perform_calculations():
         medicare = pay * DED_RATE[3]
         retirement = pay * DED_RATE[4]
 
-        total_net = pay - fed - state - medicare - retirement - soc
-        total_deductions = fed + state + medicare + retirement + soc
+        net = pay - fed - state - medicare - retirement - soc
+       
         total_gross += pay
+        total_net += net
 
         # append amounts to lists
         gross_pay.append(pay)
@@ -104,10 +99,12 @@ def perform_calculations():
         soc_sec.append(soc)
         medi.append(medicare)
         retrment.append(retirement)
+        net_pay.append(net)
             
 
 def display_results():
     currency = '8,.2f'
+    currency2 = '12,.2f'
     line = '-----------------------------------------------'
     tab = "\t"
 
@@ -121,12 +118,13 @@ def display_results():
     print(titles1 + titles2)
 
     for i in range(num_emps):
-        data = f"{emp[i]} {job[i]} {hours[i]} {format(gross_pay[i], currency)} {format(fed_tax[i], currency)} {format(state_tax[i], currency)} {format(soc_sec[i], currency)} {format(medicare[i], currency)} {format(retrment[i], currency)} {format(total_net, currency)}"
-        print(data)
+        data1 = emp[i] + "  " + job[i] + str(hours[i]) + format(gross_pay[i], currency) + format(fed_tax[i], currency) + tab + format(state_tax[i], currency)
+        data2 =  tab + format(soc_sec[i], currency)+ tab + format(medi[i], currency) + tab + tab + format(retrment[i], currency) + tab + format(net_pay[i], currency)
+        print(data1 + data2)
 
     print(line)
-    print("******************** TOTAL GROSS: $" + format(total_gross, currency))
-    print("******************** TOTAL NET  : $" + format(total_net, currency))
+    print("******************** TOTAL GROSS: $" + format(total_gross, currency2))
+    print("******************** TOTAL NET  : $" + format(total_net, currency2))
     print(line)
 
 main()
